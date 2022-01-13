@@ -30,8 +30,8 @@ kubectl get svc -n kube-system
 
 访问
 1、prometheus http://ip:30003  2、grafana http://ip:31112 （默认用户密码 admin admin）
-3、配置grafana 数据源为prometheus
-
+3、配置grafana 数据源为prometheus  地址从"内部 Endpoints"属性里找. 我这里显示为 prometheus.kube-system:9090
+ 
 
 继续修改 为了方便浏览器访问. 赋值一个外部ip
   type: ClusterIP
