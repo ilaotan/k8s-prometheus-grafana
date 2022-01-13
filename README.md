@@ -33,7 +33,7 @@ kubectl get svc -n kube-system
 3、配置grafana 数据源为prometheus
 
 
-update:  修改为
+继续修改 为了方便浏览器访问. 赋值一个外部ip
   type: ClusterIP
   externalIPs:
     - 172.16.100.52
