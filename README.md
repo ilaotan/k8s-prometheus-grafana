@@ -6,8 +6,6 @@
 
 
 `
-
-
 #安装git，下载yaml
 git clone https://github.com/redhatxl/k8s-prometheus-grafana.git
 git clone https://github.com/ilaotan/k8s-prometheus-grafana.git
@@ -45,5 +43,4 @@ update:  修改为
 
 导入dashboard面板
 Grafana.net Dashboard 315
-
 `
