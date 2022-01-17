@@ -10,7 +10,8 @@
 
 [官方文档 k8s安装grafana](https://grafana.com/docs/grafana/latest/installation/kubernetes/)
 
-`
+
+```
 
 #安装git，下载yaml
 git clone https://github.com/redhatxl/k8s-prometheus-grafana.git
@@ -54,10 +55,11 @@ kubectl get svc -n kube-system
 
 访问
 1、prometheus http://ip:30003  2、grafana http://ip:31112 （默认用户密码 admin admin）
-3、配置grafana 数据源为prometheus
+3、配置grafana 数据源为prometheus  地址从"内部 Endpoints"属性里找. 我这里显示为 prometheus.kube-system:9090
+ 
 
 
-update:  修改为
+继续修改 为了方便浏览器访问. 赋值一个外部ip
   type: ClusterIP
   externalIPs:
     - 172.16.100.52
@@ -67,7 +69,7 @@ update:  修改为
 导入dashboard面板
 Grafana.net Dashboard 315
 
-`
+```
 
 apisix开启grafana
 查到两个文档  其中第一个有点生涩, 使用了自定义Kind  改不动
