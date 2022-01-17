@@ -17,14 +17,14 @@ spec:
         app: prometheus
     spec:
       containers:
-      - image: prom/prometheus:v2.0.0
+      - image: prom/prometheus:v2.32.1
         name: prometheus
         command:
         - "/bin/prometheus"
         args:
         - "--config.file=/etc/prometheus/prometheus.yml"
         - "--storage.tsdb.path=/prometheus"
-        - "--storage.tsdb.retention=24h"
+        - "--storage.tsdb.retention.time=24h"
         ports:
         - containerPort: 9090
           protocol: TCP
